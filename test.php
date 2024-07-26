@@ -54,8 +54,21 @@
         }
         return $valor;
     }
+    #Arrays 
+        $personas = ["Victor", "Fran", "Paco", "Juan"];
 
-
-
+        echo $personas[1];
 
 ?>
+
+    <h1>Listado</h1>
+    <ul>
+    <?php
+        foreach ($personas as $key => $nombre){
+            echo $key . " ";
+            echo $nombre . " " . "<br>";
+        }
+    ?>
+    </ul>
+
+
