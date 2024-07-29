@@ -4,14 +4,14 @@ declare(strict_types=1); // <- a nivel de archivo y arriba del todo hacer que se
 
 function render_template(string $template, array $data = [])
 {
-  extract($data);
-  require "templates/$template.php";
+  extract($data); // extrae las variables del array asociativo y las deja a nivel funcion para su uso.
+  require "templates/$template.php"; //indicamos mediante la variable $template el nombre del fichero que queremos incluir 
 }
 
 function get_data(string $url): array
 {
   $result = file_get_contents($url); // si solo quieres hacer un GET de una API
-  $data = json_decode($result, true);
+  $data = json_decode($result, true); // extramos los datos a un objeto json para poder trabajar con ellos
   return $data;
 }
 
