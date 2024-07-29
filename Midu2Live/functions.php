@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1); // <- a nivel de archivo y arriba del todo
+declare(strict_types=1); // <- a nivel de archivo y arriba del todo hacer que se php no asigne tipado aleatorio 
 
 function render_template(string $template, array $data = [])
 {
